@@ -1,0 +1,25 @@
+<div class="layout">
+  <div class="list-column">
+    <app-job-list (select)="openItem($event)"></app-job-list>
+  </div>
+
+  <div class="map-column">
+    <div class="fake-map">Map Placeholder</div>
+  </div>
+  @defer {
+    @if (selectedId()) {
+      <div class="detail-wrapper"
+           animate.enter="anim-slide-in-left"
+           animate.leave="anim-slide-out-left">
+        @if (loading()) {
+          <div class="spinner">Loading…</div>
+        } @else if (detailData()) {
+          <app-job-detail-panel
+            [data]="detailData()"
+            (back)="closeDetail()">
+          </app-job-detail-panel>
+        }
+      </div>
+    }
+  }
+</div>

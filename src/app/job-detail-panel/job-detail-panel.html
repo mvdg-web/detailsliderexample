@@ -1,0 +1,14 @@
+@if(data(); as data) {
+  <div class="header">
+    <button (click)="onBack()">Back</button>
+    <h2>{{ data.title }}</h2>
+  </div>
+
+  <div class="body">
+    <p>{{ data.description }}</p>
+  </div>
+}
+@else {
+  <div>No job selected</div>
+}
+

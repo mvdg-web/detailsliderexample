@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+
+  button {
+    margin-right: 1rem;
+  }
+}
+
+.body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}

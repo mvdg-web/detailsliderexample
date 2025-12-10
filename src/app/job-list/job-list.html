@@ -1,0 +1,11 @@
+<h3>Items</h3>
+
+<ul>
+  @for(item of jobs; track item.id) {
+    <li (click)="select.emit(item.id)">
+      {{item.id}}
+      {{item.title}}
+      {{item.summary}}
+    </li>
+  }
+</ul>
